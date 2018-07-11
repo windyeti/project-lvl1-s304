@@ -2,7 +2,7 @@
   "name": "say_very_short_welcome",
   "version": "1.0.0",
   "description": "learning project",
-  "main": "index.js",
+  "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -27,6 +27,7 @@
   },
   "author": "Egor Tikhanin",
   "license": "ISC",
+  "keywords": "hexlet first project brain-games",
   "bugs": {
     "url": "https://github.com/windyeti/project-lvl1-s304/issues"
   },
