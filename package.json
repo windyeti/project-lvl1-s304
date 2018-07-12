@@ -16,10 +16,14 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.5",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
   },
   "repository": {
     "type": "git",
@@ -27,7 +31,11 @@
   },
   "author": "Egor Tikhanin",
   "license": "ISC",
-  "keywords": ["hexlet", "first project", "brain-games"],
+  "keywords": [
+    "hexlet",
+    "first project",
+    "brain-games"
+  ],
   "bugs": {
     "url": "https://github.com/windyeti/project-lvl1-s304/issues"
   },
