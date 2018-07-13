@@ -1,10 +1,9 @@
 import readlineSync from 'readline-sync';
-import getName from './getName';
+import welcome from './welcome';
 
 export default () => {
-  const name = getName();
 
-  console.log('Answer "yes" if number even otherwise answer "no".');
+  const name = welcome('Answer "yes" if number even otherwise answer "no".');
 
   let count = 0;
   while (count < 3) {

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import threetry from '../threetry';
+import evenTry from '../evenTry';
 
-threetry();
+evenTry();
