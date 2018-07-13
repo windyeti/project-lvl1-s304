@@ -1,6 +1,6 @@
 import question from '.';
 
-export const getName = () => {
+export default () => {
   console.log('Welcome to the Brain Games!');
-  return question()
+  return question();
 };

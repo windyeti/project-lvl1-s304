@@ -1,10 +1,11 @@
 {
   "name": "say_very_short_welcome",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "learning project",
   "main": "",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
