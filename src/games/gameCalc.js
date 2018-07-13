@@ -12,13 +12,13 @@ export default () => {
     const answer = readlineSync.question('Your answer: ');
     const getSum = () => {
       switch (action) {
-        case '+' :
+        case '+':
           return num1 + num2;
-        case '-' :
+        case '-':
           return num1 - num2;
-        case '*' :
+        case '*':
           return num1 * num2;
-        default :
+        default:
           return false;
       }
     };
