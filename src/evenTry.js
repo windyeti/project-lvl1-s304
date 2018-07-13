@@ -2,7 +2,6 @@ import readlineSync from 'readline-sync';
 import welcome from './welcome';
 
 export default () => {
-
   const name = welcome('Answer "yes" if number even otherwise answer "no".');
 
   let count = 0;
