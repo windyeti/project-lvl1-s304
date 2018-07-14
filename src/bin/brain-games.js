@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import templGame from '../templGame';
+import gameWelcome from '../games/gameWelcome';
 
-templGame();
+gameWelcome();
