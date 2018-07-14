@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import greet from "./index";
+import greet from './index';
 
 export default (rule, getQuestion, getRightAnswer) => {
   console.log('Welcome to the Brain Games!');

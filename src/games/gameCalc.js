@@ -12,7 +12,7 @@ export default () => {
   };
   const rightAnswer = (currentQuestion) => {
     const arrCurrentQuestion = currentQuestion.split(' ');
-      switch (arrCurrentQuestion[1]) {
+    switch (arrCurrentQuestion[1]) {
       case '+':
         return (Number(arrCurrentQuestion[0]) + Number(arrCurrentQuestion[2])).toString();
       case '-':
