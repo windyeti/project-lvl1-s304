@@ -3,6 +3,6 @@ export default (answer, rightAnswer) => {
     console.log('Correct!');
     return true;
   }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was ${rightAnswer}.`);
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
   return false;
 };

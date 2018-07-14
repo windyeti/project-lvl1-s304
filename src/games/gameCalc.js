@@ -1,34 +1,40 @@
-import readlineSync from 'readline-sync';
+import printWelcome from '../printWelcome';
+import printRule from '../printRule';
+import greet from '..';
+import printQuestion from '../printQuestion';
+import getAnswer from '../getAnswer';
+import printResult from '../printResult';
+import printBuyBuy from '../printBuyBuy';
+
+const getSum = (num1, num2, action) => {
+  switch (action) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      return false;
+  }
+};
 
 export default () => {
-  let count = 0;
-  while (count < 3) {
-    const arrAction = ['+', '-', '*'];
-    const indAction = Math.ceil(Math.random() * 3) - 1;
-    const action = arrAction[indAction];
+  let result = true;
+  const arrAction = ['+', '-', '*'];
+  printWelcome();
+  printRule('What is the result of the expression?');
+  const name = greet();
+  for (let i = 0; i < 3; i += 1) {
+    const randomIndAction = Math.ceil(Math.random() * 3) - 1;
+    const action = arrAction[randomIndAction];
     const num1 = Math.ceil(Math.random() * 100);
     const num2 = Math.ceil(Math.random() * 100);
-    console.log(`Question: ${num1} ${action} ${num2}`);
-    const answer = readlineSync.question('Your answer: ');
-    const getSum = () => {
-      switch (action) {
-        case '+':
-          return num1 + num2;
-        case '-':
-          return num1 - num2;
-        case '*':
-          return num1 * num2;
-        default:
-          return false;
-      }
-    };
-    if (+answer === getSum()) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${getSum()}'.`);
-      return false;
-    }
-    count += 1;
+    const question = `${num1} ${action} ${num2}`;
+    printQuestion(question);
+    const answer = getAnswer();
+    result = printResult(+answer, getSum(num1, num2, action));
+    if (!result) break;
   }
-  return true;
+  printBuyBuy(result, name);
 };
