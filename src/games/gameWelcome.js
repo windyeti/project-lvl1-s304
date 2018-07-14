@@ -1,7 +1,5 @@
-import printWelcome from '../printWelcome';
-import greet from '..';
+import templGame from '../templGame';
 
 export default () => {
-  printWelcome();
-  greet();
+  templGame();
 };

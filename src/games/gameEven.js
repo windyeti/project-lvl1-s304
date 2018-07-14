@@ -1,23 +1,9 @@
-import printWelcome from '../printWelcome';
-import printRule from '../printRule';
-import greet from '..';
-import printQuestion from '../printQuestion';
-import getAnswer from '../getAnswer';
-import printResult from '../printResult';
-import printBuyBuy from '../printBuyBuy';
+import templGame from '../templGame';
 
 export default () => {
-  let result = true;
-  printWelcome();
-  printRule('Answer "yes" if number even otherwise answer "no".');
-  const name = greet();
-  for (let i = 0; i < 3; i += 1) {
-    const question = Math.ceil(Math.random() * 20);
-    printQuestion(question);
-    const answer = getAnswer();
-    const isEven = (question % 2 === 0) ? 'yes' : 'no';
-    result = printResult(answer, isEven);
-    if (!result) break;
-  }
-  printBuyBuy(result, name);
+  const rule = 'Answer "yes" if number even otherwise answer "no".';
+  const question = () => Math.ceil(Math.random() * 20);
+  const rightAnswer = (currentQuestion) => currentQuestion % 2 === 0 ? 'yes' : 'no';
+  templGame(rule, question, rightAnswer);
 };
+
