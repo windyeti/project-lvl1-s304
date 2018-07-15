@@ -1,5 +1,6 @@
+import { cons } from 'hexlet-pairs';
+
 import templGame from '../templGame';
-import { cons, car, cdr, toString } from 'hexlet-pairs';
 
 const rule = 'What is the result of the expression?';
 const question = () => {
