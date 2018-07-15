@@ -24,6 +24,6 @@ const question = () => {
   };
   return cons(str, sum());
 };
-const timeTry = 3;
+const step = 3;
 
-export default () => templGame(rule, question, timeTry);
+export default () => templGame(rule, question, step);
