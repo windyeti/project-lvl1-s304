@@ -7,5 +7,6 @@ const question = () => {
   const randomNumber = Math.ceil(Math.random() * 20);
   return cons(randomNumber, isEven(randomNumber) ? 'yes' : 'no');
 };
+const timeTry = 3;
 
-export default () => templGame(rule, question);
+export default () => templGame(rule, question, timeTry);
