@@ -1,6 +1,6 @@
 {
   "name": "say_very_short_welcome",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "learning project",
   "main": "",
   "bin": {
@@ -45,6 +45,7 @@
   },
   "homepage": "https://github.com/windyeti/project-lvl1-s304#readme",
   "dependencies": {
+    "hexlet-pairs": "^1.0.8",
     "readline-sync": "^1.4.9"
   }
 }
