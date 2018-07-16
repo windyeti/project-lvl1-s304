@@ -1,7 +1,7 @@
 import { cons } from 'hexlet-pairs';
 
 import templGame from '../templGame';
-import getRandomNumber from '../getRandomNumber';
+import getRandomNumber from '../utils';
 
 const arrAction = ['+', '-', '*'];
 

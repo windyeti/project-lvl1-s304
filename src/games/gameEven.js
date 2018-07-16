@@ -1,7 +1,7 @@
 import { cons } from 'hexlet-pairs';
 
 import templGame from '../templGame';
-import getRandomNumber from '../getRandomNumber';
+import getRandomNumber from '../utils';
 
 const rule = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = num => num % 2 === 0;
