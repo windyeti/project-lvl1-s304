@@ -1,29 +1,32 @@
 import { cons } from 'hexlet-pairs';
 
 import templGame from '../templGame';
+import getRandomNumber from '../getRandomNumber';
+
+const arrAction = ['+', '-', '*'];
 
 const rule = 'What is the result of the expression?';
 const question = () => {
-  const arrAction = ['+', '-', '*'];
+  let sum = 0;
   const randomIndAction = Math.ceil(Math.random() * 3) - 1;
   const action = arrAction[randomIndAction];
-  const num1 = Math.ceil(Math.random() * 100);
-  const num2 = Math.ceil(Math.random() * 100);
+  const num1 = getRandomNumber(100);
+  const num2 = getRandomNumber(100);
   const str = `${num1} ${action} ${num2}`;
-  const sum = () => {
-    switch (action) {
-      case '+':
-        return (num1 + num2).toString();
-      case '-':
-        return (num1 - num2).toString();
-      case '*':
-        return (num1 * num2).toString();
-      default:
-        return false;
-    }
-  };
-  return cons(str, sum());
+  switch (action) {
+    case '+':
+      sum = (num1 + num2).toString();
+      break;
+    case '-':
+      sum = (num1 - num2).toString();
+      break;
+    case '*':
+      sum = (num1 * num2).toString();
+      break;
+    default:
+      sum = 0;
+  }
+  return cons(str, sum);
 };
-const step = 3;
 
-export default () => templGame(rule, question, step);
+export default () => templGame(rule, question);

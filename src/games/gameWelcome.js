@@ -1,5 +1,6 @@
-import templGame from '../templGame';
+import greet from '..';
 
 export default () => {
-  templGame();
+  console.log('Welcome to the Brain Games!');
+  greet();
 };

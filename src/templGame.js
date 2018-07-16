@@ -3,7 +3,9 @@ import { car, cdr } from 'hexlet-pairs';
 
 import greet from '.';
 
-export default (rule, getQuestion, step) => {
+const step = 3;
+
+export default (rule, getQuestion) => {
   console.log('Welcome to the Brain Games!');
   console.log(rule);
   const name = greet();
